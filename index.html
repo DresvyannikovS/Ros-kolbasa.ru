@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header center">
+      <a href="#"
+        ><img class="header__logo" src="img/Logo100x100.svg" alt="logo"
+      /></a>
+      <nav class="header__nav">
+        <a href="#" class="header__navlink">Главная</a>
+        <a href="index.html" class="header__navlink">Каталог</a>
+        <a href="about.html" class="header__navlink">О нас</a>
+        <a href="#" class="header__navlink">Доставка</a>
+        <a href="payment.html" class="header__navlink">Оплата</a>
+        <a href="#" class="header__navlink">Контакты</a>
+      </nav>
+      <div class="header__personal">
+        <a href="tel:+79780413141" class="header__mobile">+7(978) 041-31-41</a>
+        <a href="#"
+          ><img
+            class="header__personalIcon"
+            src="img/profile.svg"
+            alt="profile_icon"
+        /></a>
+        <a href="#">
+          <div class="header__basket-container">
+            <img
+              class="header__personalIcon"
+              src="img/basket.svg"
+              alt="basket_icon"
+            />
+            <div id="basketCounterContainer" class="header__counter">
+              <p id="basketCounter" class="header__count"></p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <div class="products center">
+      <div class="products__menu">
+        <a href="#" class="products__category products__category_active"
+          >Вся продукция</a
+        >
+        <a href="#" class="products__category">Сосиски и сардельки</a>
+        <a href="#" class="products__category">Колбасы варенные</a>
+        <a href="#" class="products__category">Ветчины</a>
+        <a href="#" class="products__category">Колбасы полукопченые</a>
+        <a href="#" class="products__category">Деликатесы</a>
+        <a href="#" class="products__category">Курятина / Белорусская Смак</a>
+        <a href="#" class="products__category"
+          >Продукция сырокопченная и сыровяленная</a
+        >
+        <a href="#" class="products__category"
+          >Деликатесы низкотемпературной обработки</a
+        >
+        <a href="#" class="products__category">Стародворские колбасы</a>
+        <a href="#" class="products__category">Донские традиции</a>
+        <a href="#" class="products__category">Останкино</a>
+        <a href="#" class="products__category">Сопутствующие товары</a>
+        <a href="#" class="products__category">Влад продукт</a>
+        <a href="#" class="products__category">Сыры</a>
+        <a href="#" class="products__category">Бакалея</a>
+      </div>
+      <div class="products__page">
+        <div class="products__catalog">
+          <div class="products__item">
+            <img src="img/test/test1.png" alt="" class="products__img" />
+            <p id="itemName" class="products__text">
+              Сосиски Сочные (папа может) мск Останкино
+            </p>
+
+            <div class="products__info">
+              <p id="itemPrice" class="products__price products__decoratedtext">
+                <strong>246</strong>
+              </p>
+              <div class="products__more">
+                <a
+                  href="goods_profile.html"
+                  class="products__decoratedtext products__textmore"
+                  >ПОДРОБНЕЕ</a
+                >
+                <img
+                  class="products__arrow"
+                  src="img/Arrow 1.png"
+                  alt="arrow"
+                />
+              </div>
+            </div>
+
+            <button
+              data-id="6"
+              class="products__button products__decoratedtext"
+            >
+              В КОРЗИНУ
+            </button>
+          </div>
+
+          <div class="products__item">
+            <img src="img/test/test2.png" alt="" class="products__img" />
+            <p id="itemName" class="products__text">
+              Сосиски Сочные (папа может) мск Останкино
+            </p>
+
+            <div class="products__info">
+              <p id="itemPrice" class="products__price products__decoratedtext">
+                <strong>246</strong>
+              </p>
+              <div class="products__more">
+                <a
+                  href="goods_profile.html"
+                  class="products__decoratedtext products__textmore"
+                  >ПОДРОБНЕЕ</a
+                >
+                <img
+                  class="products__arrow"
+                  src="img/Arrow 1.png"
+                  alt="arrow"
+                />
+              </div>
+            </div>
+
+            <button
+              data-id="1"
+              id="itemBasketButton"
+              class="products__button products__decoratedtext"
+            >
+              В КОРЗИНУ
+            </button>
+          </div>
+
+          <div class="products__item">
+            <img src="img/test/test3.png" alt="" class="products__img" />
+            <p id="itemName" class="products__text">
+              Сосиски Сочные (папа может) мск Останкино
+            </p>
+
+            <div class="products__info">
+              <p id="itemPrice" class="products__price products__decoratedtext">
+                <strong>246</strong>
+              </p>
+              <div class="products__more">
+                <a
+                  href="goods_profile.html"
+                  class="products__decoratedtext products__textmore"
+                  >ПОДРОБНЕЕ</a
+                >
+                <img
+                  class="products__arrow"
+                  src="img/Arrow 1.png"
+                  alt="arrow"
+                />
+              </div>
+            </div>
+
+            <button
+              data-id="2"
+              id="itemBasketButton"
+              class="products__button products__decoratedtext"
+            >
+              В КОРЗИНУ
+            </button>
+          </div>
+
+          <div class="products__item">
+            <img src="img/test/test1.png" alt="" class="products__img" />
+            <p id="itemName" class="products__text">
+              Сосиски Сочные (папа может) мск Останкино
+            </p>
+
+            <div class="products__info">
+              <p id="itemPrice" class="products__price products__decoratedtext">
+                <strong>246</strong>
+              </p>
+              <div class="products__more">
+                <a
+                  href="goods_profile.html"
+                  class="products__decoratedtext products__textmore"
+                  >ПОДРОБНЕЕ</a
+                >
+                <img
+                  class="products__arrow"
+                  src="img/Arrow 1.png"
+                  alt="arrow"
+                />
+              </div>
+            </div>
+
+            <button
+              data-id="3"
+              id="itemBasketButton"
+              class="products__button products__decoratedtext"
+            >
+              В КОРЗИНУ
+            </button>
+          </div>
+
+          <div class="products__item">
+            <img src="img/test/test2.png" alt="" class="products__img" />
+            <p id="itemName" class="products__text">
+              Сосиски Сочные (папа может) мск Останкино
+            </p>
+
+            <div class="products__info">
+              <p id="itemPrice" class="products__price products__decoratedtext">
+                <strong>246</strong>
+              </p>
+              <div class="products__more">
+                <a
+                  href="goods_profile.html"
+                  class="products__decoratedtext products__textmore"
+                  >ПОДРОБНЕЕ</a
+                >
+                <img
+                  class="products__arrow"
+                  src="img/Arrow 1.png"
+                  alt="arrow"
+                />
+              </div>
+            </div>
+
+            <button
+              data-id="4"
+              id="itemBasketButton"
+              class="products__button products__decoratedtext"
+            >
+              В КОРЗИНУ
+            </button>
+          </div>
+
+          <div class="products__item">
+            <img src="img/test/test3.png" alt="" class="products__img" />
+            <p id="itemName" class="products__text">
+              Сосиски Сочные (папа может) мск Останкино
+            </p>
+
+            <div class="products__info">
+              <p id="itemPrice" class="products__price products__decoratedtext">
+                <strong>246</strong>
+              </p>
+              <div class="products__more">
+                <a
+                  href="goods_profile.html"
+                  class="products__decoratedtext products__textmore"
+                  >ПОДРОБНЕЕ</a
+                >
+                <img
+                  class="products__arrow"
+                  src="img/Arrow 1.png"
+                  alt="arrow"
+                />
+              </div>
+            </div>
+
+            <button
+              data-id="5"
+              id="itemBasketButton"
+              class="products__button products__decoratedtext"
+            >
+              В КОРЗИНУ
+            </button>
+          </div>
+        </div>
+        <div class="products__navigation">
+          <a href="" class="products__pageNumber products__pageNumber_active"
+            >01</a
+          >
+          <img src="img/Line 109.svg" alt="" />
+          <a href="" class="products__pageNumber">02</a>
+          <a href="" class="products__pageNumber">03</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer center">
+      <div class="footer__company">
+        <img class="footer__logo" src="img/Logo100x100.svg" alt="logo" />
+        <p class="footer__text">© Российские колбасы 2020 Все права защищены</p>
+      </div>
+      <nav class="footer__nav">
+        <div class="footer__navlinks">
+          <a href="#" class="footer__link">Главная</a>
+          <a href="index.html" class="footer__link">Каталог</a>
+          <a href="about.html" class="footer__link">О нас</a>
+          <a href="#" class="footer__link">Блог</a>
+        </div>
+        <div class="footer__navlinks">
+          <a href="#" class="footer__link">Доставка</a>
+          <a href="payment.html" class="footer__link">Оплата</a>
+          <a href="#" class="footer__link">Контакты</a>
+        </div>
+        <div class="footer__navlinks">
+          <a href="#" class="footer__link">Сосиски и сардельки</a>
+          <a href="#" class="footer__link">Колбасы варенные</a>
+          <a href="#" class="footer__link">Колбасы Сырокопченые</a>
+          <a href="#" class="footer__link">Ветчины</a>
+        </div>
+        <div class="footer__navlinks">
+          <a href="#" class="footer__link">Деликатесы</a>
+          <a href="#" class="footer__link">Колбасы полукопченые</a>
+        </div>
+      </nav>
+    </footer>
+    <script type="module" src="./goods.js"></script>
+    <script type="module" src="./miniBasket.js"></script>
+    <script type="module" src="./catalog.js"></script>
+  </body>
+</html>

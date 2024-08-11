@@ -1,0 +1,42 @@
+@import "style.css";
+
+.payment    {
+    background-image: url(img/Payment.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 400px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    &__info {
+        max-width: 535px;
+    }
+
+    &__title    {
+        color: rgb(255, 255, 255);
+        font-family: Inter;
+        font-size: 41px;
+        font-weight: 700;
+        line-height: 140%;
+        text-align: left;
+        margin-bottom: 35px;
+    }
+
+    &__text {
+        color: rgb(255, 255, 255);
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 145.23%;
+        text-align: left;
+    }
+
+}
+
+.footer_bottom  {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

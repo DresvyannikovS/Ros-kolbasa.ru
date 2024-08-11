@@ -1,0 +1,147 @@
+@import "style.css";
+.basket {
+  display: none;
+}
+.basket__container {
+  padding: 50px 0;
+}
+.basket__title {
+  color: rgb(0, 0, 0);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 130%;
+  text-align: left;
+  margin-bottom: 50px;
+}
+.basket__items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.basket__item {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid grey;
+}
+.basket__item:last-child {
+  border-bottom: 1px solid grey;
+}
+.basket__img {
+  max-width: 200px;
+}
+.basket__name {
+  max-width: 500px;
+  color: rgb(0, 0, 0);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%;
+  text-align: left;
+}
+.basket__priceblock {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.basket__calc {
+  display: flex;
+  padding: 10px;
+  border-radius: 5px;
+  gap: 10px;
+}
+.basket__button-calc {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 3px;
+  border: 1px solid white;
+}
+.basket__img-calc {
+  width: 70%;
+  fill: white;
+}
+.basket__input {
+  width: 50px;
+  border: 0.5px solid rgb(193, 9, 51);
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 130%;
+  text-align: center;
+}
+.basket__price {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 130%;
+  text-align: left;
+}
+.basket__price_right {
+  text-align: right;
+}
+.basket__summ {
+  margin-top: 60px;
+}
+.basket__button {
+  padding: 25px 62px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 130%;
+  text-align: left;
+  margin: 50px auto 0;
+}
+.basket__button-container {
+  border: none;
+  background: none;
+}
+.basket__delete {
+  color: black;
+  transition: all 0.3s;
+}
+.basket__delete:hover {
+  color: red;
+}
+
+.empty {
+  display: none;
+}
+.empty__item {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.empty__img {
+  max-width: 400px;
+}
+.empty__title {
+  margin-top: 60px;
+  color: rgb(0, 0, 0);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 130%;
+  text-align: left;
+  margin-bottom: 60px;
+}
+.empty__button {
+  padding: 21px 149px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 130%;
+  text-align: left;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}/*# sourceMappingURL=style_basket.css.map */

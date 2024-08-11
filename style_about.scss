@@ -1,0 +1,126 @@
+@import "style.css";
+
+.about  {
+    padding-top: 135px;
+    padding-bottom: 91px;
+    display: flex;
+    justify-content: start;
+    gap: 306px;
+
+    &__title {
+        color: rgb(0, 0, 0);
+        font-size: 41px;
+        font-weight: 700;
+        line-height: 140%;
+        text-align: left;
+    }
+
+    &__description  {
+        max-width: 610px;
+    }
+
+    &__text {
+        color: rgb(0, 0, 0);
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 140%;
+        text-align: left;
+    }
+}
+
+.image  {
+    background-image: url(img/image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+.attainment {
+    padding-top: 24px;
+    padding-bottom: 200px;
+    background-color: rgb(247, 247, 247);
+
+    &__statistic    {
+        display: flex;
+        justify-content: start;
+        gap: 279px;
+        margin-bottom: 193px;
+    }
+
+    &__title    {
+        color: rgb(0, 0, 0);
+        font-size: 105px;
+        font-weight: 700;
+        line-height: 140%;
+        text-align: left;
+    }
+
+    &__secondtitle  {
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 140%;
+        text-align: left;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+    }
+
+    &__image    {
+        width: 100%;
+    }
+
+    &__ul   {
+        list-style-type: none;
+    }
+
+    &__li   {
+        margin-top: 50px;
+        color: rgb(0, 0, 0);
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 140%;
+        text-align: left;
+    }
+}
+
+.work   {
+    padding-top: 98px;
+    padding-bottom: 200px;
+    
+    &__title    {
+        color: rgb(0, 0, 0);
+        font-size: 41px;
+        font-weight: 700;
+        line-height: 140%;
+        text-align: left;
+        margin-bottom: 86px;
+    }
+
+    &__items    {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        column-gap: 60px;
+        row-gap: 98px;
+    }
+
+    &__item {
+        grid-column: span 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 15px;
+    }
+
+    &__img  {
+        max-height: 100px;
+    }
+
+
+}

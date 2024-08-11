@@ -1,0 +1,53 @@
+@import "style.css";
+
+.footer {
+    height: 300px;  
+    background-color: black; 
+    display: flex;
+    align-items: center;
+    gap: 76px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    &__company {
+        margin-bottom: -70px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    &__logo {
+        max-height: 100px;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        color: rgb(255, 255, 255);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 140%;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    &__nav  {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+
+    &__navlinks {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__link {
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 140%;
+        text-align: left;
+    }
+}
