@@ -3,10 +3,12 @@
   background-image: url(img/Payment.png);
   background-size: cover;
   background-repeat: no-repeat;
-  height: calc(100vh - 400px);
+  height: calc(100vh - 200px);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 100px;
+  background-position: center;
 }
 .payment__info {
   max-width: 535px;
@@ -29,8 +31,11 @@
   text-align: left;
 }
 
-.footer_bottom {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+@media (max-width: 700px) {
+  .payment__title {
+    font-size: 30px;
+  }
+  .payment__text {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=style_payment.css.map */

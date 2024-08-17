@@ -107,4 +107,80 @@
 }
 .work__img {
   max-height: 100px;
+}
+
+@media (max-width: 1000px) {
+  .about {
+    padding-bottom: 70px;
+    gap: 100px;
+  }
+  .about__title {
+    font-size: 35px;
+  }
+  .about__text {
+    font-size: 22px;
+  }
+  .image {
+    height: 400px;
+  }
+  .attainment {
+    padding-top: 24px;
+    padding-bottom: 100px;
+    background-color: rgb(247, 247, 247);
+  }
+  .attainment__statistic {
+    justify-content: space-between;
+    gap: 5px;
+    margin-bottom: 50px;
+  }
+  .attainment__title {
+    font-size: 80px;
+  }
+  .attainment__item {
+    gap: 30px;
+  }
+  .attainment__image {
+    max-width: 400px;
+  }
+  .attainment__li {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .about {
+    gap: 40px;
+  }
+  .about__title {
+    font-size: 28px;
+  }
+  .about__text {
+    font-size: 16px;
+  }
+  .attainment {
+    padding-bottom: 50px;
+  }
+  .attainment__title {
+    font-size: 50px;
+  }
+  .attainment__item {
+    gap: 30px;
+    flex-direction: column;
+  }
+  .work {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  .work__title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 100%;
+  }
+  .work__items {
+    grid-template-columns: repeat(6, 1fr);
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    row-gap: 30px;
+  }
 }/*# sourceMappingURL=style_about.css.map */

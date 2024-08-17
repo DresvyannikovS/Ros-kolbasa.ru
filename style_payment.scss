@@ -1,14 +1,15 @@
 @import "style.css";
 
-.payment    {
+.payment {
     background-image: url(img/Payment.png);
     background-size: cover;
     background-repeat: no-repeat;
-    height: calc(100vh - 400px);
+    height: calc(100vh - 200px);
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    padding-top: 100px;
+    background-position: center;
 
     &__info {
         max-width: 535px;
@@ -35,8 +36,14 @@
 
 }
 
-.footer_bottom  {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+@media  (max-width: 700px)     {
+    .payment {
+        &__title    {
+            font-size: 30px;
+        }
+
+        &__text {
+            font-size: 18px;
+        }
+    }
 }
