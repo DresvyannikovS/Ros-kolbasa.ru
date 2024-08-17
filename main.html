@@ -68,6 +68,32 @@
               <p id="basketCounter" class="header__count"></p>
             </div>
           </div>
+
+          <!-- <button class="burger"></button> -->
+          <div class="menu">
+            <input
+              type="checkbox"
+              id="burger-checkbox"
+              class="burger-checkbox"
+            />
+            <label for="burger-checkbox" class="burger"></label>
+            <ul class="menu-list">
+              <li><a href="tel:+79780413141" class="menu-item menu-item_mobile"
+                >+7(978) 041-31-41</a
+              ></li>
+              <li><a href="#" class="menu-item">Главная</a></li>
+              <li></li>
+              <li><a href="#" class="menu-item">О нас</a></li>
+              <li></li>
+              <li><a href="#" class="menu-item">Каталог</a></li>
+              <li></li>
+              <li><a href="#" class="menu-item">Контакты</a></li>
+              <li></li>
+              <li><a href="#" class="menu-item">Доставка</a></li>
+              <li></li>
+              <li><a href="#" class="menu-item">Оплата</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -119,7 +145,7 @@
           <h1 class="title__maintitle">
             Колбасная продукция<br />с доставкой по Крыму
           </h1>
-          <button id="showCallForm" class="title__button">
+          <button class="title__button showCallForm">
             Заказать звонок
           </button>
           <div>
@@ -129,6 +155,22 @@
               <li class="title__li">Постоянное наличие товара на складе</li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="media-title">
+      <div class="media-title__info container">
+        <h1 class="title__maintitle">
+          Колбасная продукция<br />с доставкой по Крыму
+        </h1>
+        <button class="title__button showCallForm">Заказать звонок</button>
+        <div>
+          <ul class="title__ul">
+            <li class="title__li">Только качественная продукция</li>
+            <li class="title__li">Большой ассортимент</li>
+            <li class="title__li">Постоянное наличие товара на складе</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -152,37 +194,54 @@
                 Сосиски Сочные (папа может) мск Останкино
               </p>
 
-              <div class="products__info">
-                <p
-                  id="itemPrice"
-                  class="products__price products__decoratedtext"
-                >
-                  <strong>241</strong>
-                </p>
-                <p id="itemPrice" class="products__price products__price_old">
-                  <strong>300</strong>
-                </p>
+              <div class="products__info products__info_old-price">
+                <div class="products__priceblock">
+                  <p
+                    id="itemPrice"
+                    class="products__price products__decoratedtext"
+                  >
+                    <strong>241</strong>
+                  </p>
+                  <p id="itemPrice" class="products__price products__price_old">
+                    <strong>300</strong>
+                  </p>
+                </div>
                 <div class="products__more">
                   <a
                     href="goods_profile.html"
                     class="products__decoratedtext products__textmore"
                     >ПОДРОБНЕЕ</a
                   >
-                  <img
+                  <svg
                     class="products__arrow"
-                    src="img/Arrow 1.png"
-                    alt="arrow"
-                  />
+                    width="31.003906"
+                    height="13.322266"
+                    viewBox="0 0 31.0039 13.3223"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Arrow 1"
+                      d="M27.58 5.66L23.63 1.71C23.24 1.31 23.24 0.69 23.63 0.29C24.03 -0.1 24.65 -0.1 25.05 0.29L30.7 5.95C31.1 6.34 31.1 6.97 30.7 7.36L25.05 13.02C24.65 13.42 24.03 13.42 23.63 13.02C23.24 12.62 23.24 12 23.63 11.61L27.58 7.66L0 7.66L0 5.66L27.58 5.66Z"
+                      fill="CurrentColor"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
-
-              <button
-                id="itemBasketButton"
-                class="products__button products__decoratedtext red-button"
-              >
-                В КОРЗИНУ
-              </button>
+              <div data-id="2" class="products__button-container">
+                <button
+                  data-id="2"
+                  id="itemBasketButton"
+                  class="products__button products__decoratedtext red-button"
+                >
+                  В КОРЗИНУ
+                </button>
+              </div>
             </div>
+
             <div
               class="products__item products__item_big products__item-slider"
             >
@@ -195,37 +254,55 @@
                 Сосиски Сочные (папа может) мск Останкино
               </p>
 
-              <div class="products__info">
-                <p
-                  id="itemPrice"
-                  class="products__price products__decoratedtext"
-                >
-                  <strong>241</strong>
-                </p>
-                <p id="itemPrice" class="products__price products__price_old">
-                  <strong>300</strong>
-                </p>
+              <div class="products__info products__info_old-price">
+                <div class="products__priceblock">
+                  <p
+                    id="itemPrice"
+                    class="products__price products__decoratedtext"
+                  >
+                    <strong>241</strong>
+                  </p>
+                  <p id="itemPrice" class="products__price products__price_old">
+                    <strong>300</strong>
+                  </p>
+                </div>
                 <div class="products__more">
                   <a
                     href="goods_profile.html"
                     class="products__decoratedtext products__textmore"
                     >ПОДРОБНЕЕ</a
                   >
-                  <img
+                  <svg
                     class="products__arrow"
-                    src="img/Arrow 1.png"
-                    alt="arrow"
-                  />
+                    width="31.003906"
+                    height="13.322266"
+                    viewBox="0 0 31.0039 13.3223"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Arrow 1"
+                      d="M27.58 5.66L23.63 1.71C23.24 1.31 23.24 0.69 23.63 0.29C24.03 -0.1 24.65 -0.1 25.05 0.29L30.7 5.95C31.1 6.34 31.1 6.97 30.7 7.36L25.05 13.02C24.65 13.42 24.03 13.42 23.63 13.02C23.24 12.62 23.24 12 23.63 11.61L27.58 7.66L0 7.66L0 5.66L27.58 5.66Z"
+                      fill="CurrentColor"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
 
-              <button
-                id="itemBasketButton"
-                class="products__button products__decoratedtext red-button"
-              >
-                В КОРЗИНУ
-              </button>
+              <div data-id="16" class="products__button-container">
+                <button
+                  data-id="16"
+                  id="itemBasketButton"
+                  class="products__button products__decoratedtext red-button"
+                >
+                  В КОРЗИНУ
+                </button>
+              </div>
             </div>
+
             <div
               class="products__item products__item_big products__item-slider"
             >
@@ -238,37 +315,55 @@
                 Сосиски Сочные (папа может) мск Останкино
               </p>
 
-              <div class="products__info">
-                <p
-                  id="itemPrice"
-                  class="products__price products__decoratedtext"
-                >
-                  <strong>241</strong>
-                </p>
-                <p id="itemPrice" class="products__price products__price_old">
-                  <strong>300</strong>
-                </p>
+              <div class="products__info products__info_old-price">
+                <div class="products__priceblock">
+                  <p
+                    id="itemPrice"
+                    class="products__price products__decoratedtext"
+                  >
+                    <strong>241</strong>
+                  </p>
+                  <p id="itemPrice" class="products__price products__price_old">
+                    <strong>300</strong>
+                  </p>
+                </div>
                 <div class="products__more">
                   <a
                     href="goods_profile.html"
                     class="products__decoratedtext products__textmore"
                     >ПОДРОБНЕЕ</a
                   >
-                  <img
+                  <svg
                     class="products__arrow"
-                    src="img/Arrow 1.png"
-                    alt="arrow"
-                  />
+                    width="31.003906"
+                    height="13.322266"
+                    viewBox="0 0 31.0039 13.3223"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Arrow 1"
+                      d="M27.58 5.66L23.63 1.71C23.24 1.31 23.24 0.69 23.63 0.29C24.03 -0.1 24.65 -0.1 25.05 0.29L30.7 5.95C31.1 6.34 31.1 6.97 30.7 7.36L25.05 13.02C24.65 13.42 24.03 13.42 23.63 13.02C23.24 12.62 23.24 12 23.63 11.61L27.58 7.66L0 7.66L0 5.66L27.58 5.66Z"
+                      fill="CurrentColor"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
 
-              <button
-                id="itemBasketButton"
-                class="products__button products__decoratedtext red-button"
-              >
-                В КОРЗИНУ
-              </button>
+              <div data-id="15" class="products__button-container">
+                <button
+                  data-id="15"
+                  id="itemBasketButton"
+                  class="products__button products__decoratedtext red-button"
+                >
+                  В КОРЗИНУ
+                </button>
+              </div>
             </div>
+
             <div
               class="products__item products__item_big products__item-slider"
             >
@@ -281,37 +376,55 @@
                 Сосиски Сочные (папа может) мск Останкино
               </p>
 
-              <div class="products__info">
-                <p
-                  id="itemPrice"
-                  class="products__price products__decoratedtext"
-                >
-                  <strong>241</strong>
-                </p>
-                <p id="itemPrice" class="products__price products__price_old">
-                  <strong>300</strong>
-                </p>
+              <div class="products__info products__info_old-price">
+                <div class="products__priceblock">
+                  <p
+                    id="itemPrice"
+                    class="products__price products__decoratedtext"
+                  >
+                    <strong>241</strong>
+                  </p>
+                  <p id="itemPrice" class="products__price products__price_old">
+                    <strong>300</strong>
+                  </p>
+                </div>
                 <div class="products__more">
                   <a
                     href="goods_profile.html"
                     class="products__decoratedtext products__textmore"
                     >ПОДРОБНЕЕ</a
                   >
-                  <img
+                  <svg
                     class="products__arrow"
-                    src="img/Arrow 1.png"
-                    alt="arrow"
-                  />
+                    width="31.003906"
+                    height="13.322266"
+                    viewBox="0 0 31.0039 13.3223"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Arrow 1"
+                      d="M27.58 5.66L23.63 1.71C23.24 1.31 23.24 0.69 23.63 0.29C24.03 -0.1 24.65 -0.1 25.05 0.29L30.7 5.95C31.1 6.34 31.1 6.97 30.7 7.36L25.05 13.02C24.65 13.42 24.03 13.42 23.63 13.02C23.24 12.62 23.24 12 23.63 11.61L27.58 7.66L0 7.66L0 5.66L27.58 5.66Z"
+                      fill="CurrentColor"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
 
-              <button
-                id="itemBasketButton"
-                class="products__button products__decoratedtext red-button"
-              >
-                В КОРЗИНУ
-              </button>
+              <div data-id="18" class="products__button-container">
+                <button
+                  data-id="18"
+                  id="itemBasketButton"
+                  class="products__button products__decoratedtext red-button"
+                >
+                  В КОРЗИНУ
+                </button>
+              </div>
             </div>
+
             <div
               class="products__item products__item_big products__item-slider"
             >
@@ -324,36 +437,53 @@
                 Сосиски Сочные (папа может) мск Останкино
               </p>
 
-              <div class="products__info">
-                <p
-                  id="itemPrice"
-                  class="products__price products__decoratedtext"
-                >
-                  <strong>241</strong>
-                </p>
-                <p id="itemPrice" class="products__price products__price_old">
-                  <strong>300</strong>
-                </p>
+              <div class="products__info products__info_old-price">
+                <div class="products__priceblock">
+                  <p
+                    id="itemPrice"
+                    class="products__price products__decoratedtext"
+                  >
+                    <strong>241</strong>
+                  </p>
+                  <p id="itemPrice" class="products__price products__price_old">
+                    <strong>300</strong>
+                  </p>
+                </div>
                 <div class="products__more">
                   <a
                     href="goods_profile.html"
                     class="products__decoratedtext products__textmore"
                     >ПОДРОБНЕЕ</a
                   >
-                  <img
+                  <svg
                     class="products__arrow"
-                    src="img/Arrow 1.png"
-                    alt="arrow"
-                  />
+                    width="31.003906"
+                    height="13.322266"
+                    viewBox="0 0 31.0039 13.3223"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Arrow 1"
+                      d="M27.58 5.66L23.63 1.71C23.24 1.31 23.24 0.69 23.63 0.29C24.03 -0.1 24.65 -0.1 25.05 0.29L30.7 5.95C31.1 6.34 31.1 6.97 30.7 7.36L25.05 13.02C24.65 13.42 24.03 13.42 23.63 13.02C23.24 12.62 23.24 12 23.63 11.61L27.58 7.66L0 7.66L0 5.66L27.58 5.66Z"
+                      fill="CurrentColor"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
 
-              <button
-                id="itemBasketButton"
-                class="products__button products__decoratedtext red-button"
-              >
-                В КОРЗИНУ
-              </button>
+              <div data-id="17" class="products__button-container">
+                <button
+                  data-id="17"
+                  id="itemBasketButton"
+                  class="products__button products__decoratedtext red-button"
+                >
+                  В КОРЗИНУ
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -370,7 +500,7 @@
             <img
               src="img/sosiski.png"
               alt="Сосиски_и_сардельки"
-              class="category__img"
+              class="category__img category__img_big"
             />
           </div>
           <div class="category__item">
@@ -391,7 +521,11 @@
           </div>
           <div class="category__item">
             <p class="category__text">Ветчины</p>
-            <img src="img/vetchina.png" alt="Ветчины" class="category__img" />
+            <img
+              src="img/vetchina.png"
+              alt="Ветчины"
+              class="category__img category__img_big"
+            />
           </div>
           <div class="category__item">
             <p class="category__text">Деликатесы</p>
@@ -406,7 +540,7 @@
             <img
               src="img/kolbasy_kopchenie.png"
               alt="Колбасы_полукопченые"
-              class="category__img"
+              class="category__img category__img_big"
             />
           </div>
         </div>
@@ -437,20 +571,29 @@
                 >
                   <strong>241</strong>
                 </p>
-                <p id="itemPrice" class="products__price products__price_old">
-                  <strong>300</strong>
-                </p>
                 <div class="products__more">
                   <a
                     href="goods_profile.html"
                     class="products__decoratedtext products__textmore"
                     >ПОДРОБНЕЕ</a
                   >
-                  <img
+                  <svg
                     class="products__arrow"
-                    src="img/Arrow 1.png"
-                    alt="arrow"
-                  />
+                    width="31.003906"
+                    height="13.322266"
+                    viewBox="0 0 31.0039 13.3223"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Arrow 1"
+                      d="M27.58 5.66L23.63 1.71C23.24 1.31 23.24 0.69 23.63 0.29C24.03 -0.1 24.65 -0.1 25.05 0.29L30.7 5.95C31.1 6.34 31.1 6.97 30.7 7.36L25.05 13.02C24.65 13.42 24.03 13.42 23.63 13.02C23.24 12.62 23.24 12 23.63 11.61L27.58 7.66L0 7.66L0 5.66L27.58 5.66Z"
+                      fill="CurrentColor"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
 
@@ -480,20 +623,29 @@
                 >
                   <strong>241</strong>
                 </p>
-                <p id="itemPrice" class="products__price products__price_old">
-                  <strong>300</strong>
-                </p>
                 <div class="products__more">
                   <a
                     href="goods_profile.html"
                     class="products__decoratedtext products__textmore"
                     >ПОДРОБНЕЕ</a
                   >
-                  <img
+                  <svg
                     class="products__arrow"
-                    src="img/Arrow 1.png"
-                    alt="arrow"
-                  />
+                    width="31.003906"
+                    height="13.322266"
+                    viewBox="0 0 31.0039 13.3223"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Arrow 1"
+                      d="M27.58 5.66L23.63 1.71C23.24 1.31 23.24 0.69 23.63 0.29C24.03 -0.1 24.65 -0.1 25.05 0.29L30.7 5.95C31.1 6.34 31.1 6.97 30.7 7.36L25.05 13.02C24.65 13.42 24.03 13.42 23.63 13.02C23.24 12.62 23.24 12 23.63 11.61L27.58 7.66L0 7.66L0 5.66L27.58 5.66Z"
+                      fill="CurrentColor"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
 
@@ -523,20 +675,29 @@
                 >
                   <strong>241</strong>
                 </p>
-                <p id="itemPrice" class="products__price products__price_old">
-                  <strong>300</strong>
-                </p>
                 <div class="products__more">
                   <a
                     href="goods_profile.html"
                     class="products__decoratedtext products__textmore"
                     >ПОДРОБНЕЕ</a
                   >
-                  <img
+                  <svg
                     class="products__arrow"
-                    src="img/Arrow 1.png"
-                    alt="arrow"
-                  />
+                    width="31.003906"
+                    height="13.322266"
+                    viewBox="0 0 31.0039 13.3223"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Arrow 1"
+                      d="M27.58 5.66L23.63 1.71C23.24 1.31 23.24 0.69 23.63 0.29C24.03 -0.1 24.65 -0.1 25.05 0.29L30.7 5.95C31.1 6.34 31.1 6.97 30.7 7.36L25.05 13.02C24.65 13.42 24.03 13.42 23.63 13.02C23.24 12.62 23.24 12 23.63 11.61L27.58 7.66L0 7.66L0 5.66L27.58 5.66Z"
+                      fill="CurrentColor"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
 
@@ -566,20 +727,29 @@
                 >
                   <strong>241</strong>
                 </p>
-                <p id="itemPrice" class="products__price products__price_old">
-                  <strong>300</strong>
-                </p>
                 <div class="products__more">
                   <a
                     href="goods_profile.html"
                     class="products__decoratedtext products__textmore"
                     >ПОДРОБНЕЕ</a
                   >
-                  <img
+                  <svg
                     class="products__arrow"
-                    src="img/Arrow 1.png"
-                    alt="arrow"
-                  />
+                    width="31.003906"
+                    height="13.322266"
+                    viewBox="0 0 31.0039 13.3223"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Arrow 1"
+                      d="M27.58 5.66L23.63 1.71C23.24 1.31 23.24 0.69 23.63 0.29C24.03 -0.1 24.65 -0.1 25.05 0.29L30.7 5.95C31.1 6.34 31.1 6.97 30.7 7.36L25.05 13.02C24.65 13.42 24.03 13.42 23.63 13.02C23.24 12.62 23.24 12 23.63 11.61L27.58 7.66L0 7.66L0 5.66L27.58 5.66Z"
+                      fill="CurrentColor"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
 
@@ -609,20 +779,29 @@
                 >
                   <strong>241</strong>
                 </p>
-                <p id="itemPrice" class="products__price products__price_old">
-                  <strong>300</strong>
-                </p>
                 <div class="products__more">
                   <a
                     href="goods_profile.html"
                     class="products__decoratedtext products__textmore"
                     >ПОДРОБНЕЕ</a
                   >
-                  <img
+                  <svg
                     class="products__arrow"
-                    src="img/Arrow 1.png"
-                    alt="arrow"
-                  />
+                    width="31.003906"
+                    height="13.322266"
+                    viewBox="0 0 31.0039 13.3223"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      id="Arrow 1"
+                      d="M27.58 5.66L23.63 1.71C23.24 1.31 23.24 0.69 23.63 0.29C24.03 -0.1 24.65 -0.1 25.05 0.29L30.7 5.95C31.1 6.34 31.1 6.97 30.7 7.36L25.05 13.02C24.65 13.42 24.03 13.42 23.63 13.02C23.24 12.62 23.24 12 23.63 11.61L27.58 7.66L0 7.66L0 5.66L27.58 5.66Z"
+                      fill="CurrentColor"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
                 </div>
               </div>
 
@@ -688,7 +867,7 @@
           <a href="about.html" class="footer__link">О нас</a>
           <a href="#" class="footer__link">Блог</a>
         </div>
-        <div class="footer__navlinks">
+        <div class="footer__navlinks footer__navlinks_media-hidden">
           <a href="#" class="footer__link">Доставка</a>
           <a href="payment.html" class="footer__link">Оплата</a>
           <a href="#" class="footer__link">Контакты</a>
@@ -720,10 +899,14 @@
 
     <script type="module" src="./modal.js"></script>
 
+    <script type="module" src="./unauthorizedUser.js"></script>
+
     <script type="module" src="./header.js"></script>
 
     <script type="module" src="./miniBasket.js"></script>
 
     <script type="module" src="./main.js"></script>
+
+    <script type="module" src="./catalog.js"></script>
   </body>
 </html>
