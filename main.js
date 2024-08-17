@@ -9,9 +9,14 @@ import {
   showModal,
   closeModal,
 } from "./modal.js";
+
 import { setUserToken, getUserToken, clearUserToken } from "./storage.js";
 
+import { showAuthForUnauthorized } from "./unauthorizedUser.js";
+
 let token = getUserToken();
+
+/*const burger = document.querySelector(".burger");*/
 
 // Контент всех форм
 
@@ -119,6 +124,12 @@ const logoutFormContent = `
         </div>
 `;
 
+/*
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+});
+*/
+
 const getFormData = (event, form) => {
   event.preventDefault();
 
@@ -126,6 +137,14 @@ const getFormData = (event, form) => {
 
   return Object.fromEntries(formData.entries());
 };
+
+const basketButtonEl = document.querySelector(".header__basket-container");
+
+basketButtonEl.addEventListener("click", () => {
+  if (token === "" || token === null) {
+    showAuthForUnauthorized();
+  }
+});
 
 // Функция рендера формы регистрации
 
@@ -186,7 +205,7 @@ const sendAuthData = async (formData) => {
 
 // Функция рендера формы авторизации
 
-const onAuthFormRender = () => {
+export const onAuthFormRender = () => {
   const form = modalContentSlot.querySelector(".form");
 
   const toRegistrationButton = modal.querySelector(".blur__button-reg");
@@ -212,8 +231,17 @@ const onlogoutFormRender = () => {
   const toLogoutButton = modalContentSlot.querySelector(".logoutButton");
   const toCancelButton = modalContentSlot.querySelector(".cancelButton");
 
-  toLogoutButton.addEventListener("click", () => {
-    /* Осуществим выход пользователя, далее перерисуем кнопку хэдера и закроем форму */
+  toLogoutButton.addEventListener("click", async () => {
+    /* Отправим запрос на бэк */
+    const response = await api({
+      route: "/logout/",
+
+      onError: (errorMessage) => {
+        alert(errorMessage);
+      },
+    });
+
+    /* Осуществим выход пользователя из хранилища, далее перерисуем кнопку хэдера и закроем форму */
     let token = clearUserToken();
 
     renderPersonalButton({ token });
@@ -227,6 +255,8 @@ const onlogoutFormRender = () => {
     });
 
     closeModal();
+    location.reload();
+    window.location.replace("main.html");
   });
 
   toCancelButton.addEventListener("click", () => {
@@ -256,17 +286,19 @@ const onCallFormRender = () => {
 };
 
 const initialRender = () => {
-  const showCallFormButton = document.getElementById("showCallForm");
+  const showCallFormButtons = document.querySelectorAll(".showCallForm");
 
-  if (showCallFormButton != null) {
-    showCallFormButton.addEventListener("click", () => {
-      showModal();
+  for (const showCallFormButton of showCallFormButtons) {
+    if (showCallFormButton != null) {
+      showCallFormButton.addEventListener("click", () => {
+        showModal();
 
-      changeModalContent({
-        content: callFormContent,
-        onModalContentChange: onCallFormRender,
+        changeModalContent({
+          content: callFormContent,
+          onModalContentChange: onCallFormRender,
+        });
       });
-    });
+    }
   }
 };
 
@@ -279,7 +311,7 @@ renderPersonalButton({ token });
 initialHeaderRender({
   onShowModal: () =>
     changeModalContent(
-      (token = ""
+      token === "" || token === null
         ? {
             content: authFormContent,
             onModalContentChange: onAuthFormRender,
@@ -287,6 +319,6 @@ initialHeaderRender({
         : {
             content: logoutFormContent,
             onModalContentChange: onlogoutFormRender,
-          })
+          }
     ),
 });

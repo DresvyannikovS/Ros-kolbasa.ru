@@ -3,8 +3,7 @@ import { renderCounter } from "./miniBasket.js";
 import { showAuthForUnauthorized } from "./unauthorizedUser.js";
 import { getUserToken } from "./storage.js";
 
-const addButtons = document.querySelectorAll(".products__button");
-
+const addButtons = document.querySelectorAll(".product__button");
 
 getGoods({
   onSuccess: (goods) => renderCounter(goods),
@@ -18,7 +17,7 @@ for (const addButtonEl of addButtons) {
       showAuthForUnauthorized();
       return;
     }
-
+    
     let container = event.currentTarget.parentElement;
     let index = event.currentTarget.dataset.id;
     addToBasket({

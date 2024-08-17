@@ -50,7 +50,7 @@ const logoutImage = `
 export const renderPersonalButton = ({ token }) => {
   const containerEl = document.getElementById("personal-container");
 
-  token === ""
+  token === "" || token === null
     ? (containerEl.innerHTML = authImage)
     : (containerEl.innerHTML = logoutImage);
 };

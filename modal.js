@@ -10,9 +10,11 @@ export const showModal = () => {
 };
 
 const initModal = () => {
+  if (modal !== null) {
   const closeButton = modal.querySelector(".close-button");
-
+  
   closeButton.addEventListener("click", closeModal);
+  }
 };
 
 export const changeModalContent = ({ content, onModalContentChange }) => {

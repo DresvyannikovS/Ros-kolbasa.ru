@@ -208,9 +208,7 @@ export const deleteToBasket = async ({ productId, onSuccess }) => {
 export const buyProducts = async ({ productsData, onSuccess }) => {
   const response = await api({
     route: "/buy_products",
-    body: {
-      products_data: productsData,
-    },
+    body: productsData,
   });
 
   if (response) {
