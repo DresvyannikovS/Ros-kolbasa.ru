@@ -1,0 +1,259 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+
+    <link rel="stylesheet" type="text/css" href="/static/slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/slick-1.8.1/slick/slick-theme.css"/>
+
+
+{% endblock %}
+
+
+{% block content %}
+
+    <section class="title">
+        <div class="title__content container">
+            <div class="title__info">
+                <h1 class="title__maintitle">
+                    Колбасная продукция<br/>с доставкой по Крыму
+                </h1>
+                <!-- Исключен айдишник у кнопки, добавлен класс, так как кнопок теперь 2
+                см.далее -->
+                <button class="title__button showCallForm">Заказать звонок</button>
+                <div>
+                    <ul class="title__ul">
+                        <li class="title__li">Только качественная продукция</li>
+                        <li class="title__li">Большой ассортимент</li>
+                        <li class="title__li">Постоянное наличие товара на складе</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="media-title">
+        <div class="media-title__info container">
+          <h1 class="title__maintitle">
+            Колбасная продукция<br />с доставкой по Крыму
+          </h1>
+          <!-- Вот вторая кнопка, аналогично убрал ид и добавил класс -->
+          <button class="title__button showCallForm">Заказать звонок</button>
+          <div>
+            <ul class="title__ul">
+              <li class="title__li">Только качественная продукция</li>
+              <li class="title__li">Большой ассортимент</li>
+              <li class="title__li">Постоянное наличие товара на складе</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="content">
+        <section class="container">
+            <div class="slider">
+                <h2 class="slider__title">Самые выгодные предложения на сегодняшний день!</h2>
+                <div class="variable-width slider__items">
+                    {% for product in discount_data %}
+                        <div class="products__item products__item_big products__item-slider">
+                            <img src="/static/img/{{ product.image }}" alt="" class="products__img products__item-slider__image"/>
+                            <p class="products__text">
+                                {{ product.name }}
+                            </p>
+<!-- изменения этого слайдера (Со скидкой) цены обернуты в див, чтоб вмещались -->
+                            <div class="products__info products__info_old-price">
+                              <div class="products__priceblock"> 
+                              <p class="products__price products__decoratedtext">
+                                    <strong>{{ product.price }} ₽</strong>
+                                </p>
+                                <p class="products__price products__price_old">
+                                    <strong>{{ product.old_price }}₽</strong>
+                                </p>
+                              </div> 
+                                <div class="products__more">
+                                    <a href="/product/{{ product.art }}"
+                                       class="products__decoratedtext products__textmore">ПОДРОБНЕЕ</a>
+                                    <svg
+                                    class="products__arrow"
+                                    width="31.003906"
+                                    height="13.322266"
+                                    viewBox="0 0 31.0039 13.3223"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                  >
+                                    <path
+                                      id="Arrow 1"
+                                      d="M27.58 5.66L23.63 1.71C23.24 1.31 23.24 0.69 23.63 0.29C24.03 -0.1 24.65 -0.1 25.05 0.29L30.7 5.95C31.1 6.34 31.1 6.97 30.7 7.36L25.05 13.02C24.65 13.42 24.03 13.42 23.63 13.02C23.24 12.62 23.24 12 23.63 11.61L27.58 7.66L0 7.66L0 5.66L27.58 5.66Z"
+                                      fill="CurrentColor"
+                                      fill-opacity="1.000000"
+                                      fill-rule="evenodd"
+                                    />
+                                  </svg>
+                                </div>
+                            </div>
+
+                            <div data-id=="{{ product.id }}" class="products__button-container">
+                            <button data-id="{{ product.id }}" class="products__button products__decoratedtext red-button">
+                                В КОРЗИНУ
+                            </button>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="background center">
+        <section class="category">
+          <h2 class="category__title">Наша продукция</h2>
+  
+          <div class="category__items">
+
+            <div class="category__item">
+              <p class="category__text">Сосиски и сардельки</p>
+              <a href="/catalog/1">
+                  <img src="/static/img/sosiski.png" alt="Сосиски_и_сардельки" class="category__img category__img_big"/>
+              </a>
+            </div>
+
+            <div class="category__item">
+              <p class="category__text">Колбасы варенные</p>
+              <a href="/catalog/2">
+                  <img src="/static/img/kolbasy_varenie.png" alt="Колбасы_вареные" class="category__img"/>
+              </a>
+            </div>
+            
+            <div class="category__item">
+              <p class="category__text">Колбасы Сырокопченые</p>
+              <a href="/catalog/7">
+                  <img src="/static/img/kolbasy_sirokopchenie.png" alt="Колбасы_Сырокопченые" class="category__img"/>
+              </a>
+            </div>
+
+            <div class="category__item">
+              <p class="category__text">Ветчины</p>
+              <a href="/catalog/3">
+                  <img src="/static/img/vetchina.png" alt="Ветчины" class="category__img category__img_big"/>
+              </a>
+            </div>
+
+            <div class="category__item">
+              <p class="category__text">Деликатесы</p>
+              <a href="/catalog/5">
+                  <img src="/static/img/delicatesy.png" alt="Деликатесы" class="category__img"/>
+              </a>
+            </div>
+
+            <div class="category__item">
+              <p class="category__text">Колбасы полукопченые</p>
+              <a href="/catalog/4">
+                  <img src="/static/img/kolbasy_kopchenie.png" alt="Колбасы_полукопченые" class="category__img category__img_big"/>
+              </a>
+            </div>
+
+          </div>
+        </section>
+      </div>
+
+      
+    <div class="content new">
+        <section class="container">
+            <div class="slider">
+                <h2 class="slider__title">Новинки</h2>
+                <div class="variable-width slider__items">
+                    {% for product in time_data %}
+                        <div class="products__item products__item_big products__item-slider">
+                            <img src="/static/img/{{ product.image }}" alt="" class="products__img products__item-slider__image"/>
+                            <p class="products__text">
+                                {{ product.name }}
+                            </p>
+
+                            <div class="products__info">
+                                <p class="products__price products__decoratedtext">
+                                    <strong>{{ product.price }} ₽</strong>
+                                </p>
+<!--                                <p class="products__price products__price_old">-->
+<!--                                    <strong>{{ product.old_price }} ₽</strong>-->
+<!--                                </p>-->
+                                <div class="products__more">
+                                    <a href="/product/{{ product.art }}"
+                                       class="products__decoratedtext products__textmore">ПОДРОБНЕЕ</a>
+                                      <svg
+                                      class="products__arrow"
+                                      width="31.003906"
+                                      height="13.322266"
+                                      viewBox="0 0 31.0039 13.3223"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    >
+                                      <path
+                                        id="Arrow 1"
+                                        d="M27.58 5.66L23.63 1.71C23.24 1.31 23.24 0.69 23.63 0.29C24.03 -0.1 24.65 -0.1 25.05 0.29L30.7 5.95C31.1 6.34 31.1 6.97 30.7 7.36L25.05 13.02C24.65 13.42 24.03 13.42 23.63 13.02C23.24 12.62 23.24 12 23.63 11.61L27.58 7.66L0 7.66L0 5.66L27.58 5.66Z"
+                                        fill="CurrentColor"
+                                        fill-opacity="1.000000"
+                                        fill-rule="evenodd"
+                                      />
+                                    </svg>
+                                </div>
+                            </div>
+  
+                              <div data-id=="{{ product.id }}" class="products__button-container">
+                              <button data-id="{{ product.id }}" class="products__button products__decoratedtext red-button">
+                                  В КОРЗИНУ
+                              </button>
+                              </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="center">
+        <div class="partners">
+            <h2 class="partners__title">Наши партнеры</h2>
+            <div class="partners__items">
+                <div class="partners__item">
+                    <img src="/static/img/partners/1.png" alt=""/>
+                </div>
+                <div class="partners__item">
+                    <img src="/static/img/partners/2.png" alt=""/>
+                </div>
+                <div class="partners__item">
+                    <img src="/static/img/partners/3.png" alt=""/>
+                </div>
+                <div class="partners__item">
+                    <img src="/static/img/partners/4.png" alt=""/>
+                </div>
+                <div class="partners__item">
+                    <img src="/static/img/partners/5.png" alt=""/>
+                </div>
+                <div class="partners__item">
+                    <img src="/static/img/partners/6.png" alt=""/>
+                </div>
+                <div class="partners__item">
+                    <img src="/static/img/partners/7.png" alt=""/>
+                </div>
+                <div class="partners__item">
+                    <img src="/static/img/partners/8.png" alt=""/>
+                </div>
+                <div class="partners__item">
+                    <img src="/static/img/partners/9.png" alt=""/>
+                </div>
+                <div class="partners__item">
+                    <img src="/static/img/partners/10.png" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% block scripts %}
+
+    {% endblock %}
+
+{% endblock %}

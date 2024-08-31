@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Оплата{% endblock %}
+
+{% block extra_head %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/static/style/style_payment.css">
+{% endblock %}
+
+{% block content %}
+<section class="payment center">
+    <div class="payment__info">
+        <h2 class="payment__title">Оплата</h2>
+        <p class="payment__text">
+            Оплата производится по факту получения товара, как наличными через чек, так и на расчетный счет.
+            Оплатить продукты в магазине “Кубаночка” по адресу г. Симферополь, ул. Севастопольская 31а
+            Режим работы с 8 до 17
+        </p>
+    </div>
+</section>
+{% endblock %}

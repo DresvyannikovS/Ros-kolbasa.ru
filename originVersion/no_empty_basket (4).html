@@ -1,0 +1,112 @@
+{% extends "base.html" %} {% block title %}Корзина{% endblock %}
+
+{% block extra_head %}
+<link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+        rel="stylesheet"
+/>
+
+{% endblock %}
+{% block content %}
+<div id="fullBasket" class="center basket">
+    <section class="basket__container">
+        <h1 class="basket__title">Товары к оформлению</h1>
+        <div id="basketContent" class="basket__items">
+            {% for item in products %}
+            <div class="basket__item">
+                <img
+                        class="basket__img"
+                        src="/static/img/{{ item.photo[0] }}"
+                        alt="{{ item.title }}"
+                />
+
+                <div class="basket__info-container">
+                <p class="basket__name">{{ item.title }}</p>
+                <div class="basket__priceblock">
+                    <div data-index="{{ item.id }}" class="basket__calc">
+                        <button class="basket__button-calc red-button remove">
+                            <img
+                                    src="/static/img/minus.svg"
+                                    alt="Minus"
+                                    class="basket__img-calc remove"
+                            />
+                        </button>
+                        <input
+                                value="{{ item.count }}"
+                                type="number"
+                                class="basket__input"
+                        />
+                        <button class="basket__button-calc red-button add">
+                            <img
+                                    src="/static/img/plus.svg"
+                                    alt="Plus"
+                                    class="basket__img-calc add"
+                            />
+                        </button>
+                    </div>
+                    <button
+                            data-index="{{ item.id }}"
+                            class="basket__button-container basket__delete"
+                    >
+                        <svg
+                                width="24px"
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                    d="M10 11V17"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                            />
+                            <path
+                                    d="M14 11V17"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                            />
+                            <path
+                                    d="M4 7H20"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                            />
+                            <path
+                                    d="M6 7H12H18V18C18 19.6569 16.6569 21 15 21H9C7.34315 21 6 19.6569 6 18V7Z"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                            />
+                            <path
+                                    d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                            />
+                        </svg>
+                    </button>
+                    <p class="basket__price">{{ item.price * item.count }} ₽</p>
+                </div></div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="basket__summ">
+            <p class="basket__price basket__price_right">
+                Итого: <span id="summ">{{ total_summ }} ₽</span>
+            </p>
+        </div>
+
+        <button id="sendButton" class="basket__button red-button">
+            Оформить заказ
+        </button>
+    </section>
+</div>
+{% endblock %}

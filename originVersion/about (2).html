@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}О нас{% endblock %}
+
+{% block extra_head %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/static/style/style_about.css">
+{% endblock %}
+
+{% block content %}
+<section class="about center">
+    <h1 class="about__title">О нас</h1>
+    <div class="about__description">
+        <p class="about__text">Мы – команда специалистов, знающих толк в колбасе, а также в цене на нее, занимаемся
+            многими брендами представленными на рынке Российской Федерации. Работаем под клиента под его пожелания и
+            нюансы, находим точки соприкосновения для долгосрочного взаимовыгодного сотрудничества.</p>
+    </div>
+</section>
+
+<section class="image">
+</section>
+
+<section class="attainment center">
+    <div class="attainment__statistic">
+        <div class="attainment__numbers">
+            <h1 class="attainment__title">7</h1>
+            <h4 class="attainment__secondtitle">лет на рынке</h4>
+        </div>
+        <div class="attainment__numbers">
+            <h1 class="attainment__title">>500</h1>
+            <h4 class="attainment__secondtitle">клиентов по всему крыму</h4>
+        </div>
+    </div>
+
+    <div class="attainment__item">
+        <img src="/static/img/facts.png" alt="facts" class="attainment__image">
+        <ul class="attainment__ul">
+            <li class="attainment__li">— Эксклюзивные контракты с поставщиками</li>
+            <li class="attainment__li">— Постоянное наличие товара на складе</li>
+            <li class="attainment__li">— Только качественная продукция</li>
+            <li class="attainment__li">— Постоянные акции</li>
+            <li class="attainment__li">— Большой ассортимент</li>
+        </ul>
+    </div>
+</section>
+
+<section class="work center">
+    <h1 class="work__title">Как мы работаем</h1>
+    <div class="work__items">
+
+        <div class="work__item">
+            <img src="/static/img/05.svg" alt="number" class="work__img">
+            <p class="work__text">Менеджер берет заказ</p>
+        </div>
+
+        <div class="work__item">
+            <img src="/static/img/04.svg" alt="number" class="work__img">
+            <p class="work__text">Оператор его принимает</p>
+        </div>
+
+        <div class="work__item">
+            <img src="/static/img/03.svg" alt="number" class="work__img">
+            <p class="work__text">Работники склада комплектуют</p>
+        </div>
+
+        <div class="work__item">
+            <img src="/static/img/01.svg" alt="number" class="work__img">
+            <p class="work__text">Скомплектованные заказы отправляем клиентам собственным транспортом, который
+                специально оборудован под доставку продукции (рефрижератор) в нужной температуре</p>
+        </div>
+
+        <div class="work__item">
+            <img src="/static/img/02.svg" alt="number" class="work__img">
+            <p class="work__text">После принятия заказа клиент получает товар на следующий день. Для каждого направления
+                свои дни доставки, но не менее 2 раз в неделю </p>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

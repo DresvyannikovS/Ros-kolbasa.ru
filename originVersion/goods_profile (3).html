@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Страница товара{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" type="text/css" href="/static/style/style_goods-profile.css">
+{% endblock %}
+
+{% block content %}
+<section class="product center">
+    <div class="product__path">
+        <!-- тут я хз что ставить, это штука должна автоматически как то формировать путь к этому товару -->
+        <!-- на гитхабе оно также  -->
+        <a href="/" class="product__pathlink">Главная</a>
+        <a href="/catalog/{{ category_id }}" class="product__pathlink">{{ product['category'] }}</a>
+        <a href="/product/{{ product.art }}" class="product__pathlink">{{ product['title'] }}</a>
+    </div>
+
+    <div class="product__card">
+        <div class="product__images">
+            <img class="product__image" src="/static/img/{{product['photo'][0]}}" alt="фото товара">
+        </div>
+        <div class="product__infoblock">
+            <h2 class="product__title">{{ product['title'] }}</h2>
+
+            <!-- вот тут добавил фото товара. По умолчанию оно скрыто,
+            заменяет собой предыдущее фото, при адаптиве менее 1000пх -->
+            <img
+                    class="product__image product__image_media"
+                    src="/static/img/{{product['photo'][0]}}"
+                    alt="фото товара"/>
+
+            <div class="product__infostring">
+                <p class="product__text product__text_title"><strong>Производитель:</strong></p>
+                <p class="product__text">«{{ product['vendor'] }}»</p>
+            </div>
+            <div class="product__infostring">
+                <p class="product__text product__text_title"><strong>Состав:</strong></p>
+                <p class="product__text">{{ product['consist'] }}</p>
+            </div>
+            <div class="product__infostring">
+                <p class="product__text product__text_title"><strong>Вкусовые отличия:</strong></p>
+                <p class="product__text">{{ product['taste_differences'] }}</p>
+            </div>
+            <!-- добавил блок с ценой, попросил заказчик -->
+            <div class="product__infostring">
+                <p class="product__text product__text_title"><strong>Цена:</strong></p>
+                <p class="product__text">{{ product['price'] }} ₽</p>
+            </div>
+            <p class="product__description">
+                {{ product['description'] }}
+            </p>
+
+            <!-- мы вроде это правили уже, но файл старый, на всякий случай
+            пишу - обернул кнопку в див, присваиваю дата ид туда и туда -->
+            <div data-id="{{ product.id }}" class="product__button-container">
+                <button
+                        data-id="{{ product.id }}"
+                        class="product__button product__button red-button">
+                    в корзину
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="/static/js/goods_profile.js"></script>
+{% endblock %}
+

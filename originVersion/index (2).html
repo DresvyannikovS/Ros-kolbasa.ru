@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Каталог{% endblock %}
+
+{% block extra_head %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/style/style.css">
+{% endblock %}
+
+
+{% block content %}
+
+<!-- добавлено выпадающее меню, появляется при ширине экрана менее 1160пх
+внутри выпадающего меню - категории товаров, постарался сделать цикл так же как у тебя 
+только <a> обернуты в эл-т списка <li>-->
+<nav class="menuhidden">
+    <label for="touch"><span class="span">Категория</span></label>
+    <input type="checkbox" id="touch" />
+
+    <ul class="slide">
+      <li><a href="/catalog"
+      class="products__category {% if active_category is none %}products__category_active{% endif %}">Все
+       товары</a></li>
+        {% for cat_id, cat_name in CATEGORY_MAP.items() %}
+        <li><a href="/catalog/{{ cat_id }}"
+                class="products__category {% if active_category == cat_id %}products__category_active{% endif %}">{{ cat_name }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+
+    <div class="products center">
+        <div class="products__menu">
+            <a href="/catalog"
+               class="products__category {% if active_category is none %}products__category_active{% endif %}">Все
+                товары</a>
+            {% for cat_id, cat_name in CATEGORY_MAP.items() %}
+                <a href="/catalog/{{ cat_id }}"
+                   class="products__category {% if active_category == cat_id %}products__category_active{% endif %}">{{ cat_name }}</a>
+            {% endfor %}
+        </div>
+
+
+        <div class="products__page">
+            <div class="products__catalog">
+                {% for product in products %}
+                    <div class="products__item">
+                        <img src="/static/img/{{ product.photo[0] }}" alt="{{ product.title }}" class="products__img">
+                        <p class="products__text">{{ product.title }}</p>
+
+                        <div class="products__info">
+                            <p class="products__price products__decoratedtext"><strong>{{ product.price }} ₽</strong></p>
+                            <div class="products__more">
+                                <a href="/product/{{ product.art }}" class="products__decoratedtext products__textmore">ПОДРОБНЕЕ</a>
+                                <svg
+                                class="products__arrow"
+                                width="31.003906"
+                                height="13.322266"
+                                viewBox="0 0 31.0039 13.3223"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                              >
+                                <path
+                                  id="Arrow 1"
+                                  d="M27.58 5.66L23.63 1.71C23.24 1.31 23.24 0.69 23.63 0.29C24.03 -0.1 24.65 -0.1 25.05 0.29L30.7 5.95C31.1 6.34 31.1 6.97 30.7 7.36L25.05 13.02C24.65 13.42 24.03 13.42 23.63 13.02C23.24 12.62 23.24 12 23.63 11.61L27.58 7.66L0 7.66L0 5.66L27.58 5.66Z"
+                                  fill="CurrentColor"
+                                  fill-opacity="1.000000"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                        </div>
+
+                        <div data-id="{{ product.id }}" class="products__button-container">
+                            <button data-id="{{ product.id }}" id="itemBasketButton"
+                                    class="products__button products__decoratedtext red-button">В КОРЗИНУ
+                            </button>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <!-- Пагинация -->
+            <div class="products__navigation">
+                {% for page_num in range(1, num_pages + 1) %}
+                    <a href="/catalog?page={{ page_num }}"
+                       class="products__pageNumber{% if page_num == current_page %} products__pageNumber_active{% endif %}">{{ '{:02d}'.format(page_num) }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

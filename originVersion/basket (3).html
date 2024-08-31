@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Корзина{% endblock %}
+
+{% block extra_head %}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style/style_empty_basket.css">
+{% endblock %}
+
+{% block content %}
+<section class="empty" id="emptyBasket">
+    <div class="center">
+        <div class="empty__item">
+            <img
+                    class="empty__img"
+                    src="/static/img/empty_basket.png"
+                    alt="empty-basket"
+            />
+            <h2 class="empty__title">Ваша корзина пока пуста</h2>
+            <a href="/catalog">
+                <button class="empty__button red-button">За покупками</button>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+
