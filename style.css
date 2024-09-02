@@ -150,14 +150,29 @@ a {
      object-fit: contain;
   margin-bottom: 20px;
 }
+.blur__input-container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+.blur__input-container-gap {
+  margin-bottom: 20px;
+}
+.blur__input-icon {
+  color: black;
+  transition: all 0.3s;
+}
+.blur__input-icon:hover {
+  transform: scale(1.1);
+}
 .blur__input {
-  width: 400px;
+  width: 100%;
   background: none;
   border: none;
-  border-bottom: 1px solid rgb(0, 0, 0);
   padding: 10px 15px;
-  margin-bottom: 30px;
-  color: rgb(192, 192, 192);
   font-family: Inter;
   font-size: 14px;
   font-weight: 400;
@@ -165,8 +180,11 @@ a {
   letter-spacing: 0%;
   text-align: left;
 }
-.blur__input_gap {
-  margin-bottom: 10px;
+.blur__input::-moz-placeholder {
+  color: rgb(192, 192, 192);
+}
+.blur__input::placeholder {
+  color: rgb(192, 192, 192);
 }
 .blur__dialog-button {
   display: flex;
@@ -1033,7 +1051,7 @@ input::-webkit-inner-spin-button {
     margin-bottom: 20px;
   }
   .blur__input {
-    width: 350px;
+    width: 100%;
   }
   .blur__button {
     width: 300px;
@@ -1118,7 +1136,7 @@ input::-webkit-inner-spin-button {
     font-size: 30px;
   }
   .blur__input {
-    width: 300px;
+    width: 100%;
     padding: 7px 7px;
   }
   .blur__button {
